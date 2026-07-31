@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: gold_stage
+    database: retention_analysis
+    schema: gold_layer
+
+
+    tables:
+        - name: cohort_table_24M     
+        - name: rfm_analysis
+        - name: churn_table
+        - name: customer_segment
