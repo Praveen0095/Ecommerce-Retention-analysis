@@ -1,0 +1,30 @@
+SELECT 
+    Cohort_month,
+    period_0,
+    period_1,
+    period_2,
+    period_3,
+    period_4,
+    period_5,
+    period_6,
+    period_7,
+    period_8,
+    period_9,
+    period_10,
+    period_11,
+    period_12,
+    period_13,
+    period_14,
+    period_15,
+    period_16,
+    period_17,
+    period_18,
+    period_19,
+    period_20,
+    period_21,
+    period_22,
+    period_23,
+    period_24
+
+FROM  {{ source('gold_stage', 'cohort_table_24M') }}
+ORDER BY Cohort_month ASC
