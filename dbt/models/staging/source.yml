@@ -1,0 +1,79 @@
+version: 2
+
+sources:
+  - name: cohort_analysis_seg
+    database: cobalt-psyche-472916-h3 
+    schema: Cohort_analysis            # The BigQuery Dataset containing raw tables
+    
+    tables:
+      - name: cohort_quart_analysis  # Actual table name inside BigQuery
+        description: "data for cohort from Parquet files"
+        columns:
+          - name: segment
+            description: "Business unit segment"
+          - name: quarter
+            description: "Period string e.g., 2019-Q1 (Jan-Mar)"
+          - name: metric_value
+            description: "Metric value for the segment and quarter"
+          - name: year
+    
+    
+      - name: Cohort_analysis_24M
+        columns:
+          - name: cohort_month
+          - name: "0"
+          - name: "1"
+          - name: "2"
+          - name: "3"
+          - name: "4"
+          - name: "5"
+          - name: "6"
+          - name: "7"
+          - name: "8"
+          - name: "9"
+          - name: "10"
+          - name: "11"
+          - name: "12"
+          - name: "13"
+          - name: "14"
+          - name: "15"
+          - name: "16"
+          - name: "17"
+          - name: "18"
+          - name: "19" 
+          - name: "20"
+          - name: "21"
+          - name: "22"
+          - name: "23"
+          - name: "24"
+      
+
+  - name:  Churn_analysis_seg
+    database: cobalt-psyche-472916-h3 
+    schema: Churn_analysis
+    
+    tables:
+      - name: Churn_analysis_table
+        columns:
+          - name: Segment
+          - name: Total_customers
+          - name: Churned_customers
+          - name: Churn_rate
+          - name: Total_revenue_lost
+          - name: Avg_monetary_churn
+  
+  - name: customer_segments_analysis
+    database: cobalt-psyche-472916-h3 
+    schema: Customer_Seg
+
+    tables:
+      - name: Customer_Segment
+      
+  - name: rfm_analysis
+    database: cobalt-psyche-472916-h3 
+    schema: RFM_analysis
+
+    tables:
+      - name: RFM_analysis_LTV  
+      - name: rfm_dist    
+  
