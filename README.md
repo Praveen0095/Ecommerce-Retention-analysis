@@ -5,7 +5,7 @@ An end-to-end modern data engineering architecture designed to ingest raw transa
 ---
 
 ## 📐 Architecture Overview
-<img width="1376" height="768" alt="Architecture Diagram" src="blob:https://gemini.google.com/4db071a8-6269-420d-b9ae-1747aa75139f" />
+![E-commerce Retention Analytics Pipeline Architecture](assets/pipeline-arch.png)
 
 The pipeline follows a modern, modular cloud architecture:
 
