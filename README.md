@@ -5,7 +5,7 @@ An end-to-end modern data engineering architecture designed to ingest raw transa
 ---
 
 ## 📐 Architecture Overview
-<img width="1376" height="768" alt="Architecture Diagram" src="https://github.com/user-attachments/assets/e518b622-13f1-451c-bac5-b014f336b98a" />
+<img width="1376" height="768" alt="Architecture Diagram" src="blob:https://gemini.google.com/4db071a8-6269-420d-b9ae-1747aa75139f" />
 
 The pipeline follows a modern, modular cloud architecture:
 
