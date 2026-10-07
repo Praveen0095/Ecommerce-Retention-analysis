@@ -135,6 +135,4 @@ dbt docs serve --project-dir dbt
 
 * **Data Quality Tests:** Schema-level test constraints (`not_null`, `unique`, `accepted_values`) are configured in `_staging__models.yml` and `_marts__models.yml`.
 * **Lineage & Dependency Tracking:** Model dependencies and DAG relationships are explicitly managed using dbt's native `{{ source() }}` and `{{ ref() }}` functions.
-
-```
-
+---
