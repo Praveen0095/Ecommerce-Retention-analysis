@@ -1,6 +1,12 @@
 # you shouldn't commit these into source control
 # these are the default directory names, adjust/add to fit your needs
+profiles.yml
+**/profiles.yml
 target/
+**/target/
 dbt_packages/
+**/dbt_packages/
 logs/
+**/logs/
 dbt_internal_packages/
+**/dbt_internal_packages/
