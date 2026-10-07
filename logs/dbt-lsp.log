@@ -1,0 +1,546 @@
+==================== 2026-10-07T06:35:26.452842Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-07T06:35:26.452956Z | 06284b0f-2988-4b11-9510-c56dff5f82ea ====================
+06:35:26.452975 [info ]: Starting dbt LSP server
+06:35:26.452993 [info ]: Connecting to LSP client on port 35451
+06:35:26.453272 [info ]: Successfully connected to LSP client
+06:35:26.453297 [info ]: Creating LSP service...
+06:35:26.454150 [info ]: Creating LSP server...
+06:35:26.454162 [info ]: Starting LSP server...
+06:35:26.977857 [info ]: Loading profiles.yml
+==================== 2026-10-07T06:35:28.267403Z | 9db1fcc9-cfc2-47ec-b8fc-a4ac04d58802 ====================
+06:35:28.267456 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully [53us]
+==================== 2026-10-07T06:35:28.837341Z | a6372521-17fc-4a4f-a53a-b45058ac9721 ====================
+06:35:28.837417 [info ]: Started loading project
+06:35:28.837730 [info ]: Loading profiles.yml
+06:35:28.843698 [debug]:    Started loading packages
+06:35:28.844415 [debug]:     Loaded [  0.00s] packages
+06:35:28.845003 [info ]: Finished loading project [  0.01s]
+06:35:28.845260 [info ]: Started parsing
+06:35:28.875636 [debug]: Finished parsing models/staging/source.yml [  0.00s]
+06:35:28.877345 [debug]: Finished parsing models/marts/mart_customer_churn_bysegment.sql [  0.00s]
+06:35:28.877853 [debug]: Finished parsing models/marts/mart_customer_retention_24M.sql [  0.00s]
+06:35:28.878139 [debug]: Finished parsing models/marts/mart_customer_segment.sql [  0.00s]
+06:35:28.878417 [debug]: Finished parsing models/marts/mart_rfm_dist.sql [  0.00s]
+06:35:28.878684 [debug]: Finished parsing models/staging/stg_Churn_analysis.sql [  0.00s]
+06:35:28.878939 [debug]: Finished parsing models/staging/stg_cohort_analysis_24M.sql [  0.00s]
+06:35:28.879189 [debug]: Finished parsing models/staging/stg_customer_segments.sql [  0.00s]
+06:35:28.879439 [debug]: Finished parsing models/staging/stg_rfm_analysis.sql [  0.00s]
+06:35:28.879690 [debug]: Finished parsing models/staging/stg_rfm_distr.sql [  0.00s]
+06:35:28.955549 [info ]: Finished parsing [  0.11s]
+06:35:28.955644 [debug]: dbt State service disabled by configuration; executing normally
+06:35:28.955747 [info ]: Cached model count updated: 9 models (estimate)
+06:35:28.955755 [info ]: Cached model count updated: 9 models (accurate)
+06:35:28.955800 [info ]: Started scheduling
+06:35:28.955902 [info ]: Finished scheduling [  0.00s]
+06:35:28.955920 [debug]: Compilation - 2 nodes selected: {"model.Ecommerce-Retention-analysis.mart_customer_retention_24M", "model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M"}
+06:35:28.955947 [info ]: Started scheduling
+06:35:28.956015 [info ]: Finished scheduling [  0.00s]
+06:35:28.956134 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "cobalt-psyche-472916-h3", schema: "RFM_analysis", table: "RFM_analysis_LTV" }) and interval: None
+06:35:28.956144 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "cobalt-psyche-472916-h3", schema: "RFM_analysis", table: "rfm_dist" }) and interval: None
+06:35:28.956147 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "cobalt-psyche-472916-h3", schema: "Cohort_analysis", table: "Cohort_analysis_24M" }) and interval: None
+06:35:28.956150 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "cobalt-psyche-472916-h3", schema: "Customer_Seg", table: "Customer_Segment" }) and interval: None
+06:35:28.956153 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "cobalt-psyche-472916-h3", schema: "Churn_analysis", table: "Churn_analysis_table" }) and interval: None
+06:35:28.957644 [info ]: Started building task graph
+06:35:28.957741 [info ]: Finished building task graph [  0.00s]
+06:35:28.959105 [info ]: Started rendering (2 nodes)
+06:35:28.959132 [info ]: Started model dbt_ps.mart_customer_retention_24M
+06:35:28.959143 [debug]: Started rendering model dbt_ps.mart_customer_retention_24M
+06:35:28.959172 [info ]: Started model dbt_ps.stg_cohort_analysis_24M
+06:35:28.959182 [debug]: Started rendering model dbt_ps.stg_cohort_analysis_24M
+06:35:28.959878 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_retention_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_retention_24M.sql
+06:35:28.959912 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_cohort_analysis_24M.sql
+06:35:28.959977 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:35:28.960013 [info ]: Started analyzing (2 nodes)
+06:35:28.960026 [debug]: Started analyzing model dbt_ps.mart_customer_retention_24M
+06:35:28.960052 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:35:28.960076 [info ]: Finished rendering [  0.00s] (2 nodes, 0 skipped, 0 errors)
+06:35:28.960090 [debug]: Started analyzing model dbt_ps.stg_cohort_analysis_24M
+06:35:28.965679 [debug]: Finished analyzing [  0.01s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:35:28.965703 [info ]:  Succeeded model dbt_ps.stg_cohort_analysis_24M (view) [2 of 2 in 0.01s]
+06:35:28.972459 [debug]: Finished analyzing [  0.01s] model dbt_ps.mart_customer_retention_24M [success]
+06:35:28.972480 [info ]: Finished analyzing [  0.01s] (2 nodes, 0 skipped, 0 errors)
+06:35:28.972486 [info ]:  Succeeded model dbt_ps.mart_customer_retention_24M (table) [1 of 2 in 0.01s]
+06:35:28.975996 [info ]: Started scheduling
+06:35:28.976041 [info ]: Finished scheduling [  0.00s]
+06:35:28.976123 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [138ms]
+Processed: 2 models
+Summary: 2 total | 2 success
+06:35:28.976197 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:35:34.327853Z | e3988000-b34c-4786-b2cc-817a61edbe7b ====================
+06:35:34.327923 [info ]: Started loading project
+06:35:34.328130 [info ]: Loading profiles.yml
+06:35:34.330392 [info ]: Finished loading project [  0.00s]
+06:35:34.346561 [info ]: Cached model count updated: 9 models (estimate)
+06:35:34.346578 [info ]: Cached model count updated: 9 models (accurate)
+06:35:34.346605 [info ]: Started scheduling
+06:35:34.346699 [info ]: Finished scheduling [  0.00s]
+06:35:34.346717 [debug]: Compilation - 9 nodes selected: {"model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment", "model.Ecommerce-Retention-analysis.mart_customer_retention_24M", "model.Ecommerce-Retention-analysis.mart_customer_segment", "model.Ecommerce-Retention-analysis.mart_rfm_dist", "model.Ecommerce-Retention-analysis.stg_Churn_analysis", "model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M", "model.Ecommerce-Retention-analysis.stg_customer_segments", "model.Ecommerce-Retention-analysis.stg_rfm_analysis", "model.Ecommerce-Retention-analysis.stg_rfm_distr"}
+06:35:34.348065 [info ]: Started building task graph
+06:35:34.348143 [info ]: Finished building task graph [  0.00s]
+06:35:34.348837 [info ]: Started rendering (9 nodes)
+06:35:34.348861 [info ]: Started model dbt_ps.mart_rfm_dist
+06:35:34.348873 [debug]: Started rendering model dbt_ps.mart_rfm_dist
+06:35:34.348897 [info ]: Started model dbt_ps.stg_rfm_distr
+06:35:34.348905 [debug]: Started rendering model dbt_ps.stg_rfm_distr
+06:35:34.348914 [info ]: Started model dbt_ps.stg_rfm_analysis
+06:35:34.348921 [debug]: Started rendering model dbt_ps.stg_rfm_analysis
+06:35:34.348930 [info ]: Started model dbt_ps.mart_customer_segment
+06:35:34.348941 [debug]: Started rendering model dbt_ps.mart_customer_segment
+06:35:34.348951 [info ]: Started model dbt_ps.stg_customer_segments
+06:35:34.348997 [debug]: Started rendering model dbt_ps.stg_customer_segments
+06:35:34.349029 [info ]: Started model dbt_ps.mart_customer_retention_24M
+06:35:34.349043 [debug]: Started rendering model dbt_ps.mart_customer_retention_24M
+06:35:34.349060 [info ]: Started model dbt_ps.stg_cohort_analysis_24M
+06:35:34.349069 [debug]: Started rendering model dbt_ps.stg_cohort_analysis_24M
+06:35:34.349085 [info ]: Started model dbt_ps.mart_customer_churn_bysegment
+06:35:34.349094 [debug]: Started rendering model dbt_ps.mart_customer_churn_bysegment
+06:35:34.349103 [info ]: Started model dbt_ps.stg_Churn_analysis
+06:35:34.349111 [debug]: Started rendering model dbt_ps.stg_Churn_analysis
+06:35:34.349432 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_retention_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_retention_24M.sql
+06:35:34.349510 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:35:34.349524 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_distr at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_distr.sql
+06:35:34.349537 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_cohort_analysis_24M.sql
+06:35:34.349547 [info ]: Started analyzing (9 nodes)
+06:35:34.349562 [debug]: Started analyzing model dbt_ps.mart_customer_retention_24M
+06:35:34.349591 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:35:34.349607 [debug]: Started analyzing model dbt_ps.stg_cohort_analysis_24M
+06:35:34.349622 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_rfm_dist at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_rfm_dist.sql
+06:35:34.349631 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:35:34.349656 [debug]: Started analyzing model dbt_ps.stg_rfm_distr
+06:35:34.349771 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_rfm_dist [success]
+06:35:34.349800 [debug]: Started analyzing model dbt_ps.mart_rfm_dist
+06:35:34.349852 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_customer_segments at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_customer_segments.sql
+06:35:34.349897 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_analysis.sql
+06:35:34.349897 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_segment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_segment.sql
+06:35:34.349919 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:35:34.349961 [info ]:  Succeeded model dbt_ps.stg_cohort_analysis_24M (view) [7 of 9 in 0.00s]
+06:35:34.349991 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:35:34.350011 [debug]: Started analyzing model dbt_ps.stg_customer_segments
+06:35:34.350036 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:35:34.350048 [info ]:  Succeeded model dbt_ps.stg_rfm_distr (view) [2 of 9 in 0.00s]
+06:35:34.350053 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_Churn_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_Churn_analysis.sql
+06:35:34.350067 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:35:34.350067 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_churn_bysegment.sql
+06:35:34.350081 [debug]: Started analyzing model dbt_ps.stg_rfm_analysis
+06:35:34.350097 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:35:34.350109 [debug]: Started analyzing model dbt_ps.mart_customer_segment
+06:35:34.350141 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:35:34.350161 [debug]: Started analyzing model dbt_ps.mart_customer_churn_bysegment
+06:35:34.350181 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:35:34.350189 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+06:35:34.350195 [debug]: Started analyzing model dbt_ps.stg_Churn_analysis
+06:35:34.350239 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:35:34.350264 [info ]:  Succeeded model dbt_ps.stg_customer_segments (view) [5 of 9 in 0.00s]
+06:35:34.350309 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:35:34.350322 [info ]:  Succeeded model dbt_ps.stg_rfm_analysis (view) [3 of 9 in 0.00s]
+06:35:34.350342 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:35:34.350355 [info ]:  Succeeded model dbt_ps.mart_customer_segment (table) [4 of 9 in 0.00s]
+06:35:34.350372 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:35:34.350383 [info ]:  Succeeded model dbt_ps.stg_Churn_analysis (view) [9 of 9 in 0.00s]
+06:35:34.350414 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:35:34.350425 [info ]:  Succeeded model dbt_ps.mart_customer_churn_bysegment (table) [8 of 9 in 0.00s]
+06:35:34.353136 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:35:34.353154 [info ]:  Succeeded model dbt_ps.mart_customer_retention_24M (table) [6 of 9 in 0.00s]
+06:35:34.360028 [debug]: Finished analyzing [  0.01s] model dbt_ps.mart_rfm_dist [success]
+06:35:34.360048 [info ]: Finished analyzing [  0.01s] (9 nodes, 0 skipped, 0 errors)
+06:35:34.360054 [info ]:  Succeeded model dbt_ps.mart_rfm_dist (table) [1 of 9 in 0.01s]
+06:35:34.364184 [info ]: Started scheduling
+06:35:34.364252 [info ]: Finished scheduling [  0.00s]
+06:35:34.364326 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [36ms]
+Processed: 9 models
+Summary: 9 total | 9 success
+06:35:34.364444 [info ]: Cached model count updated: 9 models (accurate)
+06:39:53.356563 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-07T06:39:57.587431Z | a77f2acc-6eef-4413-9dce-460f6021e6f6 ====================
+06:39:57.587525 [info ]: Started loading project
+06:39:57.587776 [info ]: Loading profiles.yml
+06:39:57.590314 [info ]: Finished loading project [  0.00s]
+06:39:57.611988 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [24ms]
+06:39:57.612070 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:40:00.597425Z | 06015899-9b5c-4687-8b07-4450b0d1dc4f ====================
+06:40:00.597509 [info ]: Started loading project
+06:40:00.597746 [info ]: Loading profiles.yml
+06:40:00.600209 [info ]: Finished loading project [  0.00s]
+06:40:00.620157 [info ]: Cached model count updated: 9 models (estimate)
+06:40:00.620177 [info ]: Cached model count updated: 9 models (accurate)
+06:40:00.620207 [info ]: Started scheduling
+06:40:00.620312 [info ]: Finished scheduling [  0.00s]
+06:40:00.620330 [debug]: Compilation - 9 nodes selected: {"model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment", "model.Ecommerce-Retention-analysis.mart_customer_retention_24M", "model.Ecommerce-Retention-analysis.mart_customer_segment", "model.Ecommerce-Retention-analysis.mart_rfm_dist", "model.Ecommerce-Retention-analysis.stg_Churn_analysis", "model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M", "model.Ecommerce-Retention-analysis.stg_customer_segments", "model.Ecommerce-Retention-analysis.stg_rfm_analysis", "model.Ecommerce-Retention-analysis.stg_rfm_distr"}
+06:40:00.621770 [info ]: Started building task graph
+06:40:00.621854 [info ]: Finished building task graph [  0.00s]
+06:40:00.622591 [info ]: Started rendering (9 nodes)
+06:40:00.622613 [info ]: Started model dbt_ps.mart_rfm_dist
+06:40:00.622626 [debug]: Started rendering model dbt_ps.mart_rfm_dist
+06:40:00.622655 [info ]: Started model dbt_ps.stg_rfm_distr
+06:40:00.622663 [debug]: Started rendering model dbt_ps.stg_rfm_distr
+06:40:00.622672 [info ]: Started model dbt_ps.stg_rfm_analysis
+06:40:00.622679 [debug]: Started rendering model dbt_ps.stg_rfm_analysis
+06:40:00.622686 [info ]: Started model dbt_ps.mart_customer_segment
+06:40:00.622691 [debug]: Started rendering model dbt_ps.mart_customer_segment
+06:40:00.622701 [info ]: Started model dbt_ps.stg_customer_segments
+06:40:00.622709 [debug]: Started rendering model dbt_ps.stg_customer_segments
+06:40:00.622720 [info ]: Started model dbt_ps.mart_customer_retention_24M
+06:40:00.622727 [debug]: Started rendering model dbt_ps.mart_customer_retention_24M
+06:40:00.622735 [info ]: Started model dbt_ps.stg_cohort_analysis_24M
+06:40:00.622743 [debug]: Started rendering model dbt_ps.stg_cohort_analysis_24M
+06:40:00.622750 [info ]: Started model dbt_ps.mart_customer_churn_bysegment
+06:40:00.622757 [debug]: Started rendering model dbt_ps.mart_customer_churn_bysegment
+06:40:00.622767 [info ]: Started model dbt_ps.stg_Churn_analysis
+06:40:00.622776 [debug]: Started rendering model dbt_ps.stg_Churn_analysis
+06:40:00.622958 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_distr at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_distr.sql
+06:40:00.622961 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_analysis.sql
+06:40:00.622969 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_segment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_segment.sql
+06:40:00.623040 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:40:00.623071 [info ]: Started analyzing (9 nodes)
+06:40:00.623085 [debug]: Started analyzing model dbt_ps.stg_rfm_distr
+06:40:00.623110 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:40:00.623127 [debug]: Started analyzing model dbt_ps.mart_customer_segment
+06:40:00.623145 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:40:00.623155 [debug]: Started analyzing model dbt_ps.stg_rfm_analysis
+06:40:00.623157 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_cohort_analysis_24M.sql
+06:40:00.623182 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_churn_bysegment.sql
+06:40:00.623195 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_Churn_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_Churn_analysis.sql
+06:40:00.623219 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_retention_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_retention_24M.sql
+06:40:00.623240 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_rfm_dist at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_rfm_dist.sql
+06:40:00.623257 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_customer_segments at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_customer_segments.sql
+06:40:00.623277 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:40:00.623302 [debug]: Started analyzing model dbt_ps.stg_cohort_analysis_24M
+06:40:00.623324 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:40:00.623360 [debug]: Started analyzing model dbt_ps.mart_customer_churn_bysegment
+06:40:00.623377 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:40:00.623387 [debug]: Started analyzing model dbt_ps.stg_Churn_analysis
+06:40:00.623403 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_rfm_dist [success]
+06:40:00.623422 [debug]: Started analyzing model dbt_ps.mart_rfm_dist
+06:40:00.623439 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:40:00.623445 [debug]: Started analyzing model dbt_ps.mart_customer_retention_24M
+06:40:00.623465 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:40:00.623485 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+06:40:00.623496 [debug]: Started analyzing model dbt_ps.stg_customer_segments
+06:40:00.623524 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:40:00.623534 [info ]:  Succeeded model dbt_ps.stg_rfm_analysis (view) [3 of 9 in 0.00s]
+06:40:00.623563 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:40:00.623573 [info ]:  Succeeded model dbt_ps.mart_customer_segment (table) [4 of 9 in 0.00s]
+06:40:00.623586 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:40:00.623604 [info ]:  Succeeded model dbt_ps.stg_rfm_distr (view) [2 of 9 in 0.00s]
+06:40:00.623612 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:40:00.623617 [info ]:  Succeeded model dbt_ps.mart_customer_churn_bysegment (table) [8 of 9 in 0.00s]
+06:40:00.623625 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:40:00.623629 [info ]:  Succeeded model dbt_ps.stg_Churn_analysis (view) [9 of 9 in 0.00s]
+06:40:00.623636 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:40:00.623642 [info ]:  Succeeded model dbt_ps.stg_cohort_analysis_24M (view) [7 of 9 in 0.00s]
+06:40:00.623658 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:40:00.623664 [info ]:  Succeeded model dbt_ps.stg_customer_segments (view) [5 of 9 in 0.00s]
+06:40:00.623873 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_rfm_dist [success]
+06:40:00.623892 [info ]:  Succeeded model dbt_ps.mart_rfm_dist (table) [1 of 9 in 0.00s]
+06:40:00.626929 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:40:00.626949 [info ]: Finished analyzing [  0.00s] (9 nodes, 0 skipped, 0 errors)
+06:40:00.626955 [info ]:  Succeeded model dbt_ps.mart_customer_retention_24M (table) [6 of 9 in 0.00s]
+06:40:00.629875 [info ]: Started scheduling
+06:40:00.629924 [info ]: Finished scheduling [  0.00s]
+06:40:00.629971 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [32ms]
+Processed: 9 models
+Summary: 9 total | 9 success
+06:40:00.630036 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:40:26.158148Z | ac44a813-c095-4820-8ca1-710136f4e5b7 ====================
+06:40:26.158218 [info ]: Started loading project
+06:40:26.158444 [info ]: Loading profiles.yml
+06:40:26.160852 [info ]: Finished loading project [  0.00s]
+06:40:26.179413 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [21ms]
+06:40:26.179489 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:40:29.518040Z | ee432a57-2691-4823-b6f9-2e9a2f1d99f4 ====================
+06:40:29.518109 [info ]: Started loading project
+06:40:29.518318 [info ]: Loading profiles.yml
+06:40:29.520576 [info ]: Finished loading project [  0.00s]
+06:40:29.536176 [info ]: Cached model count updated: 9 models (estimate)
+06:40:29.536195 [info ]: Cached model count updated: 9 models (accurate)
+06:40:29.536222 [info ]: Started scheduling
+06:40:29.536313 [info ]: Finished scheduling [  0.00s]
+06:40:29.536329 [debug]: Compilation - 9 nodes selected: {"model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment", "model.Ecommerce-Retention-analysis.mart_customer_retention_24M", "model.Ecommerce-Retention-analysis.mart_customer_segment", "model.Ecommerce-Retention-analysis.mart_rfm_dist", "model.Ecommerce-Retention-analysis.stg_Churn_analysis", "model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M", "model.Ecommerce-Retention-analysis.stg_customer_segments", "model.Ecommerce-Retention-analysis.stg_rfm_analysis", "model.Ecommerce-Retention-analysis.stg_rfm_distr"}
+06:40:29.537430 [info ]: Started building task graph
+06:40:29.537509 [info ]: Finished building task graph [  0.00s]
+06:40:29.538164 [info ]: Started rendering (9 nodes)
+06:40:29.538187 [info ]: Started model dbt_ps.mart_rfm_dist
+06:40:29.538198 [debug]: Started rendering model dbt_ps.mart_rfm_dist
+06:40:29.538223 [info ]: Started model dbt_ps.stg_rfm_distr
+06:40:29.538231 [debug]: Started rendering model dbt_ps.stg_rfm_distr
+06:40:29.538241 [info ]: Started model dbt_ps.stg_rfm_analysis
+06:40:29.538246 [debug]: Started rendering model dbt_ps.stg_rfm_analysis
+06:40:29.538256 [info ]: Started model dbt_ps.mart_customer_segment
+06:40:29.538264 [debug]: Started rendering model dbt_ps.mart_customer_segment
+06:40:29.538275 [info ]: Started model dbt_ps.stg_customer_segments
+06:40:29.538283 [debug]: Started rendering model dbt_ps.stg_customer_segments
+06:40:29.538290 [info ]: Started model dbt_ps.mart_customer_retention_24M
+06:40:29.538300 [debug]: Started rendering model dbt_ps.mart_customer_retention_24M
+06:40:29.538307 [info ]: Started model dbt_ps.stg_cohort_analysis_24M
+06:40:29.538312 [debug]: Started rendering model dbt_ps.stg_cohort_analysis_24M
+06:40:29.538320 [info ]: Started model dbt_ps.mart_customer_churn_bysegment
+06:40:29.538327 [debug]: Started rendering model dbt_ps.mart_customer_churn_bysegment
+06:40:29.538341 [info ]: Started model dbt_ps.stg_Churn_analysis
+06:40:29.538348 [debug]: Started rendering model dbt_ps.stg_Churn_analysis
+06:40:29.538711 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_segment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_segment.sql
+06:40:29.538711 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_analysis.sql
+06:40:29.538711 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_retention_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_retention_24M.sql
+06:40:29.538713 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_rfm_dist at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_rfm_dist.sql
+06:40:29.538754 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_cohort_analysis_24M at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_cohort_analysis_24M.sql
+06:40:29.538754 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_customer_segments at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_customer_segments.sql
+06:40:29.538792 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:40:29.538819 [info ]: Started analyzing (9 nodes)
+06:40:29.538818 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_rfm_distr at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_rfm_distr.sql
+06:40:29.538826 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.stg_Churn_analysis at target/.lsp/compiled/Ecommerce-Retention-analysis/models/staging/stg_Churn_analysis.sql
+06:40:29.538831 [debug]: Compiled SQL for node model.Ecommerce-Retention-analysis.mart_customer_churn_bysegment at target/.lsp/compiled/Ecommerce-Retention-analysis/models/marts/mart_customer_churn_bysegment.sql
+06:40:29.538834 [debug]: Started analyzing model dbt_ps.mart_customer_segment
+06:40:29.538876 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:40:29.538886 [debug]: Started analyzing model dbt_ps.mart_customer_retention_24M
+06:40:29.538905 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:40:29.538920 [debug]: Started analyzing model dbt_ps.stg_rfm_analysis
+06:40:29.538939 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_rfm_dist [success]
+06:40:29.538950 [debug]: Started analyzing model dbt_ps.mart_rfm_dist
+06:40:29.538968 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:40:29.538982 [debug]: Started analyzing model dbt_ps.stg_customer_segments
+06:40:29.538999 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:40:29.539011 [debug]: Started analyzing model dbt_ps.stg_cohort_analysis_24M
+06:40:29.539030 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:40:29.539041 [debug]: Started analyzing model dbt_ps.stg_Churn_analysis
+06:40:29.539064 [debug]: Finished rendering [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:40:29.539076 [debug]: Started analyzing model dbt_ps.mart_customer_churn_bysegment
+06:40:29.539098 [debug]: Finished rendering [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:40:29.539108 [info ]: Finished rendering [  0.00s] (9 nodes, 0 skipped, 0 errors)
+06:40:29.539155 [debug]: Started analyzing model dbt_ps.stg_rfm_distr
+06:40:29.539179 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_segment [success]
+06:40:29.539193 [info ]:  Succeeded model dbt_ps.mart_customer_segment (table) [4 of 9 in 0.00s]
+06:40:29.539215 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_analysis [success]
+06:40:29.539226 [info ]:  Succeeded model dbt_ps.stg_rfm_analysis (view) [3 of 9 in 0.00s]
+06:40:29.539240 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_customer_segments [success]
+06:40:29.539251 [info ]:  Succeeded model dbt_ps.stg_customer_segments (view) [5 of 9 in 0.00s]
+06:40:29.539265 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_churn_bysegment [success]
+06:40:29.539275 [info ]:  Succeeded model dbt_ps.mart_customer_churn_bysegment (table) [8 of 9 in 0.00s]
+06:40:29.539290 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_Churn_analysis [success]
+06:40:29.539300 [info ]:  Succeeded model dbt_ps.stg_Churn_analysis (view) [9 of 9 in 0.00s]
+06:40:29.539316 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_cohort_analysis_24M [success]
+06:40:29.539327 [info ]:  Succeeded model dbt_ps.stg_cohort_analysis_24M (view) [7 of 9 in 0.00s]
+06:40:29.539350 [debug]: Finished analyzing [  0.00s] model dbt_ps.stg_rfm_distr [success]
+06:40:29.539360 [info ]:  Succeeded model dbt_ps.stg_rfm_distr (view) [2 of 9 in 0.00s]
+06:40:29.539473 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_rfm_dist [success]
+06:40:29.539487 [info ]:  Succeeded model dbt_ps.mart_rfm_dist (table) [1 of 9 in 0.00s]
+06:40:29.542481 [debug]: Finished analyzing [  0.00s] model dbt_ps.mart_customer_retention_24M [success]
+06:40:29.542503 [info ]: Finished analyzing [  0.00s] (9 nodes, 0 skipped, 0 errors)
+06:40:29.542511 [info ]:  Succeeded model dbt_ps.mart_customer_retention_24M (table) [6 of 9 in 0.00s]
+06:40:29.545291 [info ]: Started scheduling
+06:40:29.545338 [info ]: Finished scheduling [  0.00s]
+06:40:29.545385 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [27ms]
+Processed: 9 models
+Summary: 9 total | 9 success
+06:40:29.545452 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:40:58.137425Z | 4e2420b2-0c16-4b8d-a171-cceb0b97b0f7 ====================
+06:40:58.137503 [info ]: Started loading project
+06:40:58.137740 [info ]: Loading profiles.yml
+06:40:58.140159 [info ]: Finished loading project [  0.00s]
+06:40:58.162226 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [24ms]
+06:40:58.162292 [info ]: Cached model count updated: 9 models (accurate)
+==================== 2026-10-07T06:41:03.528203Z | 67ca58b4-595d-481f-979c-a5ee94a38a78 ====================
+06:41:03.528272 [info ]: Started loading project
+06:41:03.528500 [info ]: Loading profiles.yml
+06:41:03.530755 [info ]: Finished loading project [  0.00s]
+==================== 2026-10-07T06:41:03.531930Z | 6fd8239a-0699-48f0-9e64-a6588ab947b6 ====================
+06:41:03.531969 [info ]: Started loading project
+06:41:03.532117 [info ]: Loading profiles.yml
+06:41:03.537789 [debug]:    Started loading packages
+06:41:03.538403 [debug]:     Loaded [  0.00s] packages
+06:41:03.539140 [info ]: Finished loading project [  0.01s]
+06:41:03.539294 [info ]: Started parsing
+06:41:03.645974 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.Ecommerce-Retention-analysis.marts
+- models.Ecommerce-Retention-analysis.staging
+06:41:03.646735 [info ]: Finished parsing [  0.11s]
+06:41:03.646876 [info ]: Cached model count updated: 0 models (estimate)
+06:41:03.646889 [info ]: Cached model count updated: 0 models (accurate)
+06:41:03.646905 [info ]: Started scheduling
+06:41:03.646936 [info ]: Finished scheduling [  0.00s]
+06:41:03.646952 [debug]: Compilation - 0 nodes selected: {}
+06:41:03.646973 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+06:41:03.646992 [info ]: Started scheduling
+06:41:03.647004 [info ]: Finished scheduling [  0.00s]
+06:41:03.648291 [info ]: Started building task graph
+06:41:03.648315 [info ]: Finished building task graph [  0.00s]
+06:41:03.652280 [info ]: Started scheduling
+06:41:03.652318 [info ]: Finished scheduling [  0.00s]
+06:41:03.652407 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'default' [120ms]
+06:41:03.652469 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [124ms]
+06:41:03.653874 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:41:31.418727Z | 0473bcf6-bc48-4be8-8e93-d14ed7869b33 ====================
+06:41:31.418817 [info ]: Started loading project
+06:41:31.419119 [info ]: Loading profiles.yml
+06:41:31.422715 [info ]: Finished loading project [  0.00s]
+06:41:31.454786 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [36ms]
+06:41:31.454891 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:41:33.967473Z | 0ba84e92-0d31-4e29-95d6-29b8d62ffb49 ====================
+06:41:33.967535 [info ]: Started loading project
+06:41:33.967752 [info ]: Loading profiles.yml
+06:41:33.969805 [info ]: Finished loading project [  0.00s]
+06:41:33.985163 [info ]: Cached model count updated: 0 models (estimate)
+06:41:33.985184 [info ]: Cached model count updated: 0 models (accurate)
+06:41:33.985207 [info ]: Started scheduling
+06:41:33.985234 [info ]: Finished scheduling [  0.00s]
+06:41:33.985247 [debug]: Compilation - 0 nodes selected: {}
+06:41:33.985266 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+06:41:33.986356 [info ]: Started building task graph
+06:41:33.986377 [info ]: Finished building task graph [  0.00s]
+06:41:33.989891 [info ]: Started scheduling
+06:41:33.989917 [info ]: Finished scheduling [  0.00s]
+06:41:33.990027 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'default' [22ms]
+06:41:33.990101 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:41:38.627571Z | c80edcea-e2b8-4989-99ee-8a831683c370 ====================
+06:41:38.627644 [info ]: Started loading project
+06:41:38.627861 [info ]: Loading profiles.yml
+06:41:38.630257 [info ]: Finished loading project [  0.00s]
+06:41:38.647477 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [19ms]
+06:41:38.647536 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:41:41.417491Z | 7603d6b2-dc25-4908-b23d-6ea0f96d7f08 ====================
+06:41:41.417543 [info ]: Started loading project
+06:41:41.417766 [info ]: Loading profiles.yml
+06:41:41.420193 [info ]: Finished loading project [  0.00s]
+06:41:41.439746 [info ]: Cached model count updated: 0 models (estimate)
+06:41:41.439766 [info ]: Cached model count updated: 0 models (accurate)
+06:41:41.439779 [info ]: Started scheduling
+06:41:41.439800 [info ]: Finished scheduling [  0.00s]
+06:41:41.439812 [debug]: Compilation - 0 nodes selected: {}
+06:41:41.439834 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+06:41:41.440918 [info ]: Started building task graph
+06:41:41.440939 [info ]: Finished building task graph [  0.00s]
+06:41:41.444024 [info ]: Started scheduling
+06:41:41.444161 [info ]: Finished scheduling [  0.00s]
+06:41:41.444246 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'default' [26ms]
+06:41:41.444298 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:42:08.617488Z | b2942527-e0be-492b-a1cd-1573cded1bbe ====================
+06:42:08.617552 [info ]: Started loading project
+06:42:08.617758 [info ]: Loading profiles.yml
+06:42:08.619934 [info ]: Finished loading project [  0.00s]
+06:42:08.638477 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [20ms]
+06:42:08.638558 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:42:12.547354Z | 7e95b3c7-e955-4ac9-8274-0cfd328e230d ====================
+06:42:12.547407 [info ]: Started loading project
+06:42:12.547613 [info ]: Loading profiles.yml
+06:42:12.550179 [info ]: Finished loading project [  0.00s]
+06:42:12.570168 [info ]: Cached model count updated: 0 models (estimate)
+06:42:12.570188 [info ]: Cached model count updated: 0 models (accurate)
+06:42:12.570201 [info ]: Started scheduling
+06:42:12.570228 [info ]: Finished scheduling [  0.00s]
+06:42:12.570241 [debug]: Compilation - 0 nodes selected: {}
+06:42:12.570258 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+06:42:12.571329 [info ]: Started building task graph
+06:42:12.571349 [info ]: Finished building task graph [  0.00s]
+06:42:12.574818 [info ]: Started scheduling
+06:42:12.574844 [info ]: Finished scheduling [  0.00s]
+06:42:12.574913 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'default' [27ms]
+06:42:12.574968 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:42:29.687515Z | a666e2a3-e329-4820-82df-80df9a7e8e8f ====================
+06:42:29.687575 [info ]: Started loading project
+06:42:29.687792 [info ]: Loading profiles.yml
+06:42:29.689760 [info ]: Finished loading project [  0.00s]
+06:42:29.706483 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' successfully for target 'default' [18ms]
+06:42:29.706580 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-10-07T06:42:31.987896Z | 49d20d00-ba64-420a-80e5-0203a99c9579 ====================
+06:42:31.987964 [info ]: Started loading project
+06:42:31.988005 [info ]: Finished loading project [  0.00s]
+06:42:31.988048 [error]: [IoError (dbt1001)]: Cannot open file /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: Failed to open file: /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: No such file or directory (os error 2): No such file or directory (os error 2)
+06:42:31.988102 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [205us]
+06:42:31.988169 [info ]: Cached model count updated: 0 models (accurate)
+06:43:06.376613 [debug]: Ignoring unsupported LSP notification
+06:43:17.956613 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-07T06:46:34.622849Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-07T06:46:34.623006Z | 22cff565-c8e1-45d1-ae41-ac4c655aaff8 ====================
+06:46:34.623035 [info ]: Starting dbt LSP server
+06:46:34.623062 [info ]: Connecting to LSP client on port 33381
+06:46:34.623323 [info ]: Successfully connected to LSP client
+06:46:34.623347 [info ]: Creating LSP service...
+06:46:34.624112 [info ]: Creating LSP server...
+06:46:34.624124 [info ]: Starting LSP server...
+06:46:37.676628 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-07T06:46:37.677364Z | 022c7697-b8f6-45fe-8eca-9b43a0b803da ====================
+06:46:37.677442 [info ]: Started loading project
+06:46:37.677490 [info ]: Finished loading project [  0.00s]
+06:46:37.677539 [error]: [IoError (dbt1001)]: Cannot open file /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: Failed to open file: /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: No such file or directory (os error 2): No such file or directory (os error 2)
+06:46:37.677585 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [220us]
+06:46:37.756636 [debug]: Ignoring unsupported LSP notification
+06:46:37.764357 [debug]: Ignoring unsupported LSP notification
+06:46:37.868578 [debug]: Ignoring unsupported LSP notification
+06:46:38.116715 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-07T06:46:55.915584Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-10-07T06:46:55.915684Z | 715a3d4e-165f-49f7-9503-e97be015e97e ====================
+06:46:55.915714 [info ]: Starting dbt LSP server
+06:46:55.915732 [info ]: Connecting to LSP client on port 35545
+06:46:55.915952 [info ]: Successfully connected to LSP client
+06:46:55.915972 [info ]: Creating LSP service...
+06:46:55.916727 [info ]: Creating LSP server...
+06:46:55.916739 [info ]: Starting LSP server...
+==================== 2026-10-07T06:46:57.756590Z | eb085c89-55bf-4d1e-b9e2-45f0d376f03c ====================
+06:46:57.756672 [info ]: Started loading project
+06:46:57.756742 [info ]: Finished loading project [  0.00s]
+06:46:57.756795 [error]: [IoError (dbt1001)]: Cannot open file /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: Failed to open file: /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: No such file or directory (os error 2): No such file or directory (os error 2)
+06:46:57.756848 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [258us]
+06:48:16.446612 [debug]: Ignoring unsupported LSP notification
+06:48:35.566584 [debug]: Ignoring unsupported LSP notification
+06:48:39.766571 [debug]: Ignoring unsupported LSP notification
+06:49:15.386612 [debug]: Ignoring unsupported LSP notification
+06:49:18.056841 [debug]: Ignoring unsupported LSP notification
+06:49:20.726632 [debug]: Ignoring unsupported LSP notification
+06:53:26.506594 [debug]: Ignoring unsupported LSP notification
+06:53:29.506591 [debug]: Ignoring unsupported LSP notification
+06:53:47.846596 [debug]: Ignoring unsupported LSP notification
+06:53:49.686648 [debug]: Ignoring unsupported LSP notification
+06:53:50.576581 [debug]: Ignoring unsupported LSP notification
+06:53:53.786573 [debug]: Ignoring unsupported LSP notification
+06:54:09.176641 [debug]: Ignoring unsupported LSP notification
+06:54:13.306592 [debug]: Ignoring unsupported LSP notification
+06:54:15.066688 [debug]: Ignoring unsupported LSP notification
+06:54:15.346592 [debug]: Ignoring unsupported LSP notification
+06:54:38.946605 [debug]: Ignoring unsupported LSP notification
+06:55:05.836728 [debug]: Ignoring unsupported LSP notification
+==================== 2026-10-07T06:55:19.087376Z | e31420e8-e761-40f1-bc9a-53e712e094e2 ====================
+06:55:19.087433 [info ]: Started loading project
+06:55:19.087464 [info ]: Finished loading project [  0.00s]
+06:55:19.087498 [error]: [IoError (dbt1001)]: Cannot open file /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: Failed to open file: /dbt_project/3ce64aab-7c10-43bc-b6db-83511da616fc/dbt_project.yml: No such file or directory (os error 2): No such file or directory (os error 2)
+06:55:19.087535 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [159us]
