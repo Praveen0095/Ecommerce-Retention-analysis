@@ -9,4 +9,4 @@ SELECT
     m_score AS M_Score,
     Segment
     
-FROM {{ source('rfm_analysis', 'RFM_analysis_LTV') }}
+FROM `cobalt-psyche-472916-h3`.`RFM_analysis`.`RFM_analysis_LTV`
